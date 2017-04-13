@@ -4,5 +4,5 @@
 使用到的第三方模块有
   Mvvmlight
   oxyplot
-  Mahapps.Metro
+  MahApps.Metro
 #
