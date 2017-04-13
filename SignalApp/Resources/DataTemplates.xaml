@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- MenuItem Icons -->
+    <TextBlock x:Key="FileOpenIcon" Text="&#xEC50;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="SaveImageIcon" Text="&#xE74E;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="ExitIcon" Text="&#xEA39;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="ROIIcon" Text="&#xEBFC;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="SmoothIcon" Text="&#xEDA8;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="BackIcon" Text="&#xE9D2;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="PeakIcon" Text="&#xE9D9;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="EnergyScaleIcon" Text="&#xEB3C;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="EfficientScaleIcon" Text="&#xED5E;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="LibraryIcon" Text="&#xE1D3;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="AboutIcon" Text="&#xE946;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="TeamIcon" Text="&#xE902;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    
+    <!-- ToolBar Icons -->
+    <TextBlock x:Key="FileOpenToolBarIcon" Text="&#xE8DA;" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="SaveImageToolBarIcon" Text="&#xE74E;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="SmoothToolBarIcon" Text="&#xEDA8;" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="BackToolBarIcon" Text="&#xE9D2;" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="PeakToolBarIcon" Text="&#xE9D9;" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="EnergyScaleToolBarIcon" Text="&#xEB3C;" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="EfficientScaleToolBarIcon" Text="&#xED5E;" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="LibraryToolBarIcon" Text="&#xE1D3;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="AboutToolBarIcon" Text="&#xE946;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+    <TextBlock x:Key="TeamToolBarIcon" Text="&#xE902;" HorizontalAlignment="Center" Style="{DynamicResource Segoe MDL2 Asstes}" />
+
+    <!-- Button Content -->
+    <TextBlock x:Key="BackButtonIcon" Text="&#xE0A6;" Style="{StaticResource Segoe MDL2 Asstes}" />
+</ResourceDictionary>

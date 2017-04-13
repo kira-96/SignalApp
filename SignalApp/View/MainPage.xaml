@@ -1,0 +1,104 @@
+﻿<Page x:Class="SignalApp.View.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:local="clr-namespace:SignalApp.View" 
+      DataContext="{Binding Source={StaticResource Locator}, Path=MainPage}"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="960">
+
+    <Page.Resources>
+        <Style x:Key="TileStyle" TargetType="metro:Tile">
+            <Setter Property="Width" Value="160" />
+            <Setter Property="Height" Value="160" />
+            <Setter Property="Margin" Value="6" />
+        </Style>
+    </Page.Resources>
+    
+    <Grid Background="White">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <ListView>
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal" 
+                                   Width="{Binding ActualWidth, Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainPage}}}" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+
+                <metro:Tile Tag="UExp" Background="OrangeRed" 
+                            Title="负指数信号"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="DoubleExp" Background="Green" 
+                            Title="双指数信号"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="SquareIn" Background="MediumBlue" 
+                            Title="方波信号->CR"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="StepIn" Background="Purple" 
+                            Title="阶梯信号->CR"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="UExpIn" Background="Pink" 
+                            Title="负指数信号->CR"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="DoubleExpIn" Background="DeepSkyBlue" 
+                            Title="双指数信号->CR"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="StepInRC" Background="Coral" 
+                            Title="阶梯信号->RC"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="UExpInRC" Background="Firebrick" 
+                            Title="负指数信号->RC"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="UExpInvert" Background="ForestGreen" 
+                            Title="负指数信号->反向放大"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="UExpInPZC" Background="LightSteelBlue" 
+                            Title="负指数信号->极零相消"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="SinInLC" Background="Chocolate" 
+                            Title="正弦信号->LC"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="SinInSK" Background="DarkSalmon" 
+                            Title="正弦信号->SK"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="UExpInSK" Background="Gainsboro" 
+                            Title="负指数信号->SK"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+                <metro:Tile Tag="Trapezoidal" Background="Bisque" 
+                            Title="梯形成形"
+                            Style="{StaticResource TileStyle}" 
+                            Command="{Binding TileCommand}" 
+                            CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Tag}" />
+            </ListView>
+        </ScrollViewer>
+    </Grid>
+</Page>

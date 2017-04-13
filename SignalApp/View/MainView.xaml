@@ -1,0 +1,42 @@
+﻿<metro:MetroWindow x:Class="SignalApp.View.MainView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:converter="clr-namespace:SignalApp.Converters"
+                   mc:Ignorable="d"
+                   ResizeMode="CanResizeWithGrip"
+                   WindowStartupLocation="CenterScreen"
+                   DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+                   GlowBrush="{DynamicResource AccentColorBrush}"
+                   Width="960" Height="540"
+                   Title="App">
+
+    <metro:MetroWindow.Resources>
+        <converter:VisibilityConverter x:Key="VisibilityConv" />
+    </metro:MetroWindow.Resources>
+    
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <metro:MetroWindow.LeftWindowCommands>
+        <metro:WindowCommands>
+            <Button Content="&#xE0A6;" Command="{Binding GoBackCommand}"
+                    TextElement.FontFamily="pack://application:,,,/Resources/#Segoe MDL2 Assets" 
+                    Visibility="{Binding CanGoBack, Mode=OneWay, Converter={StaticResource VisibilityConv}}" />
+        </metro:WindowCommands>
+    </metro:MetroWindow.LeftWindowCommands>
+    
+    <metro:MetroWindow.RightWindowCommands>
+        <metro:WindowCommands>
+            <TextBlock Text="Hello World!" />
+        </metro:WindowCommands>
+    </metro:MetroWindow.RightWindowCommands>
+    
+    <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
+</metro:MetroWindow>
