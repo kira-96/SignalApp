@@ -1,8 +1,8 @@
 ﻿namespace SignalApp.ViewModel
 {
+    using CommonServiceLocator;
     using GalaSoft.MvvmLight;
     using GalaSoft.MvvmLight.Command;
-    using Microsoft.Practices.ServiceLocation;
     using SignalApp.NavigationService;
 
     public class MainPageViewModel : ViewModelBase

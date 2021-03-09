@@ -14,8 +14,8 @@
 
 namespace SignalApp.ViewModel
 {
+    using CommonServiceLocator;
     using GalaSoft.MvvmLight.Ioc;
-    using Microsoft.Practices.ServiceLocation;
     using System;
     using SignalApp.NavigationService;
 

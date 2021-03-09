@@ -2,10 +2,10 @@
                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                   xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
                    xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-                   xmlns:converter="clr-namespace:SignalApp.Converters"
+                   xmlns:converter="clr-namespace:SignalApp.Converters" 
                    mc:Ignorable="d"
                    ResizeMode="CanResizeWithGrip"
                    WindowStartupLocation="CenterScreen"
@@ -32,11 +32,13 @@
         </metro:WindowCommands>
     </metro:MetroWindow.LeftWindowCommands>
     
+    <!--
     <metro:MetroWindow.RightWindowCommands>
         <metro:WindowCommands>
             <TextBlock Text="Hello World!" />
         </metro:WindowCommands>
     </metro:MetroWindow.RightWindowCommands>
+    -->
     
     <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
 </metro:MetroWindow>
